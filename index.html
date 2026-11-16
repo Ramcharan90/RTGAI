@@ -1,1 +1,38 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RTG AI</title>
+<style>
+body{margin:0;font-family:Arial;background:#fff;color:#171717}
+header{padding:20px;border-bottom:1px solid #eee;font-size:24px;font-weight:bold}
+header span{color:#705cff}
+main{max-width:750px;margin:100px auto;padding:20px;text-align:center}
+h1{font-size:42px}
+p{color:#777}
+textarea{width:95%;height:100px;padding:15px;border:1px solid #ddd;border-radius:15px;font-size:17px}
+button{padding:13px 22px;background:#171717;color:white;border:0;border-radius:12px;margin:10px}
+#answer{padding:15px;white-space:pre-wrap}
+</style>
+</head>
+<body>
+<header>RTG <span>AI</span></header>
+<main>
+<h1>What can I help with?</h1>
+<p>Your ideas, questions and creativity — all in one place.</p>
+<textarea id="msg" placeholder="Message RTG AI..."></textarea>
+<br>
+<button onclick="sendMessage()">Send ↑</button>
+<div id="answer"></div>
+</main>
+<script>
+function sendMessage(){
+let msg=document.getElementById("msg").value.trim();
+if(!msg)return;
+document.getElementById("answer").textContent=
+"Your message: "+msg+"\n\nRTG AI is being developed. AI backend connection is still required.";
+}
+</script>
+</body>
+  </html>
